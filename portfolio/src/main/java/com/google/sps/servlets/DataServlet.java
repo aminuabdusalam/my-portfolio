@@ -39,4 +39,11 @@ public class DataServlet extends HttpServlet {
     response.setContentType("text/html;");
     response.getWriter().println(json);
   }
+
+  @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    // Get the input from the form.
+    String text = request.getParameter("text-input");
+    response.sendRedirect("../index.html");
+  }
 }
